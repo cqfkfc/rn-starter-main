@@ -8,7 +8,7 @@ const data = Array.from({ length: 20 }, (x, i) => ({
   age: Math.round(Math.random() * 30),
 }));
 
-const ListComponent = () => {
+const ListScreen = () => {
   return (
     <View>
       <Text>List</Text>
@@ -43,4 +43,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ListComponent;
+export default ListScreen;

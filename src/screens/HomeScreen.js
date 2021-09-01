@@ -8,11 +8,19 @@ const HomeScreen = ({ navigation }) => {
     <View>
       <Text style={styles.text}>HomeScreen</Text>
       <Button
-        onPress={() => navigation.navigate("ComponentOne")}
-        title="ComponentOne"
+        onPress={() => navigation.navigate("FirstScreen")}
+        title="Go to the first screen"
       />
-      <TouchableOpacity onPress={() => navigation.navigate("ListComponent")}>
-        <Text>ListComponent</Text>
+      <Button
+        onPress={() => navigation.navigate("ListScreen")}
+        title="Go to the list screen"
+      />
+      <Button
+        onPress={() => navigation.navigate("ImageScreen")}
+        title="Go to the image screen"
+      />
+      <TouchableOpacity onPress={() => navigation.navigate("FirstScreen")}>
+        <Text>TouchableOpacity First Screen Demo</Text>
       </TouchableOpacity>
     </View>
   );

@@ -1,14 +1,16 @@
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
-import ComponentOne from "./src/screens/ComponentOne";
+import FirstScreen from "./src/screens/FirstScreen";
 import HomeScreen from "./src/screens/HomeScreen";
-import ListComponent from "./src/screens/ListComponent";
+import ImageScreen from "./src/screens/ImageScreen";
+import ListScreen from "./src/screens/ListScreen";
 
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
-    ComponentOne: ComponentOne,
-    ListComponent: ListComponent,
+    FirstScreen: FirstScreen,
+    ListScreen: ListScreen,
+    ImageScreen: ImageScreen,
   },
   {
     initialRouteName: "Home",
