@@ -1,21 +1,26 @@
 import React from "react";
 import { StyleSheet, Image, View, Text } from "react-native";
+import ImageDetail from "../components/ImageDetail";
 
 // https://reactnative.dev/docs/image
 
 const ImageScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Image Component</Text>
-      <Image
-        style={styles.image}
-        source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
+      <ImageDetail
+        title="Forest"
+        src={require("../../assets/forest.jpg")}
+        score={9}
       />
-      <Image
-        style={styles.image}
-        source={{
-          uri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==",
-        }}
+      <ImageDetail
+        title="Beach"
+        src={require("../../assets/forest.jpg")}
+        score={9}
+      />
+      <ImageDetail
+        title="Mountain"
+        src={require("../../assets/mountain.jpg")}
+        score={8}
       />
     </View>
   );
