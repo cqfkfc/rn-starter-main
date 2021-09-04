@@ -3,10 +3,8 @@ import { View, Button, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
   // Button vs. Touchable Opacity
-  console.log("navigation", navigation);
   return (
     <View>
-      <Text style={styles.text}>HomeScreen</Text>
       <Button
         onPress={() => navigation.navigate("FirstScreen")}
         title="Go to the first screen"
