@@ -1,25 +1,21 @@
 import React from "react";
 import { Button, StyleSheet, View, Text } from "react-native";
 
-const ColorCounter = ({ colorText, colorValue, setColorValue }) => {
-  const validateColor = (value) => {
-    // color value should be within [0, 256]
-    return Math.min(Math.max(value, 0), 256);
-  };
-
+const ColorCounter = ({
+  colorText,
+  colorValue,
+  onClickIncrease,
+  onClickDecrease,
+}) => {
   return (
     <View style={styles.container}>
       <Text>Value: {colorValue}</Text>
       <Button
-        onPress={() => {
-          setColorValue(validateColor(colorValue + 1));
-        }}
+        onPress={() => onClickIncrease()}
         title={`Increase ${colorText}`}
       />
       <Button
-        onPress={() => {
-          setColorValue(validateColor(colorValue - 1));
-        }}
+        onPress={() => onClickDecrease()}
         title={`Decrease ${colorText}`}
       />
     </View>
