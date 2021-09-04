@@ -8,6 +8,8 @@ const ChangeColorScreen = () => {
   const [blue, setBlue] = useState(0);
   const rgb = `rgb(${red}, ${green}, ${blue})`;
 
+  const COLOR_INCREMENT = 10;
+
   const validateColor = (value) => {
     // color value should be within [0, 256]
     if (value > 256) {
@@ -28,21 +30,21 @@ const ChangeColorScreen = () => {
       <ColorCounter
         colorText="red"
         colorValue={red}
-        onClickIncrease={() => setRed(validateColor(red + 1))}
-        onClickDecrease={() => setRed(validateColor(red - 1))}
+        onClickIncrease={() => setRed(validateColor(red + COLOR_INCREMENT))}
+        onClickDecrease={() => setRed(validateColor(red - COLOR_INCREMENT))}
       />
       <ColorCounter
         colorText="green"
         colorValue={green}
-        onClickIncrease={() => setGreen(validateColor(green + 1))}
-        onClickDecrease={() => setGreen(validateColor(green - 1))}
+        onClickIncrease={() => setGreen(validateColor(green + COLOR_INCREMENT))}
+        onClickDecrease={() => setGreen(validateColor(green - COLOR_INCREMENT))}
         setColorValue={setGreen}
       />
       <ColorCounter
         colorText="blue"
         colorValue={blue}
-        onClickIncrease={() => setBlue(validateColor(blue + 1))}
-        onClickDecrease={() => setBlue(validateColor(blue - 1))}
+        onClickIncrease={() => setBlue(validateColor(blue + COLOR_INCREMENT))}
+        onClickDecrease={() => setBlue(validateColor(blue - COLOR_INCREMENT))}
       />
       <View style={[styles.box, { backgroundColor: rgb }]}>
         <Text style={styles.text}>{rgb}</Text>
