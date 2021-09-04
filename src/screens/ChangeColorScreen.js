@@ -38,7 +38,6 @@ const ChangeColorScreen = () => {
         colorValue={green}
         onClickIncrease={() => setGreen(validateColor(green + COLOR_INCREMENT))}
         onClickDecrease={() => setGreen(validateColor(green - COLOR_INCREMENT))}
-        setColorValue={setGreen}
       />
       <ColorCounter
         colorText="blue"
