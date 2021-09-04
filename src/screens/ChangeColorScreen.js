@@ -4,13 +4,22 @@ import { View, Text, StyleSheet } from "react-native";
 import ColorCounter from "../components/ColorCounter";
 const ChangeColorScreen = () => {
   const [red, setRed] = useState(256);
-  const [green, setGreen] = useState(256);
-  const [blue, setBlue] = useState(256);
+  const [green, setGreen] = useState(256 / 2);
+  const [blue, setBlue] = useState(0);
   const rgb = `rgb(${red}, ${green}, ${blue})`;
 
   const validateColor = (value) => {
     // color value should be within [0, 256]
-    return Math.min(Math.max(value, 0), 256);
+    if (value > 256) {
+      alert("Value should not be more than 256.");
+      return 256;
+    }
+    if (value < 0) {
+      alert("Value should not be less than 0.");
+      return 0;
+    }
+
+    return value;
   };
 
   return (
@@ -35,8 +44,9 @@ const ChangeColorScreen = () => {
         onClickIncrease={() => setBlue(validateColor(blue + 1))}
         onClickDecrease={() => setBlue(validateColor(blue - 1))}
       />
-      <Text>{rgb}</Text>
-      <View style={[styles.box, { backgroundColor: rgb }]} />
+      <View style={[styles.box, { backgroundColor: rgb }]}>
+        <Text style={styles.text}>{rgb}</Text>
+      </View>
     </View>
   );
 };
@@ -48,6 +58,12 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     borderWidth: 10,
     borderColor: "red",
+    justifyContent: "center", // justify words vertically
+    alignItems: "center", // justify words horizontally
+    fontFamily: "Helvetica",
+  },
+  text: {
+    color: "grey",
   },
 });
 
