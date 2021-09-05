@@ -37,6 +37,10 @@ const HomeScreen = ({ navigation }) => {
         onPress={() => navigation.navigate("ChangeColorReducerScreen")}
         title="Go to Change Color (Reducer Method) Screen"
       />
+      <Button
+        onPress={() => navigation.navigate("EnterNameScreen")}
+        title="Go to Enter Name Screen"
+      />
       <TouchableOpacity onPress={() => navigation.navigate("FirstScreen")}>
         <Text>TouchableOpacity First Screen Demo</Text>
       </TouchableOpacity>
