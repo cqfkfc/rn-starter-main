@@ -10,7 +10,7 @@ const EnterNameScreen = () => {
     <SafeAreaView>
       <Text>Enter Name:</Text>
       <TextInput
-        autoCapitalize={false}
+        autoCapitalize="characters"
         autoCorrect={false}
         style={styles.input}
         value={name}

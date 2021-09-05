@@ -43,7 +43,7 @@ const ColorScreen = () => {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: "10",
+    fontSize: 10,
     color: "grey",
     backgroundColor: "white",
     alignSelf: "center",
