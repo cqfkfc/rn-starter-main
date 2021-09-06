@@ -6,6 +6,7 @@ import ColorScreen from "./src/screens/ColorScreen";
 import CounterScreen from "./src/screens/CounterScreen";
 import CounterScreenReducer from "./src/screens/CounterScreenReducer";
 import EnterNameScreen from "./src/screens/EnterNameScreen";
+import EnterPasswordScreen from "./src/screens/EnterPasswordScreen";
 import FirstScreen from "./src/screens/FirstScreen";
 import HomeScreen from "./src/screens/HomeScreen";
 import ImageScreen from "./src/screens/ImageScreen";
@@ -23,6 +24,7 @@ const navigator = createStackNavigator(
     ChangeColorScreen: ChangeColorScreen,
     ChangeColorReducerScreen: ChangeColorReducerScreen,
     EnterNameScreen: EnterNameScreen,
+    EnterPasswordScreen: EnterPasswordScreen,
   },
   {
     initialRouteName: "Home",

@@ -41,6 +41,10 @@ const HomeScreen = ({ navigation }) => {
         onPress={() => navigation.navigate("EnterNameScreen")}
         title="Go to Enter Name Screen"
       />
+      <Button
+        onPress={() => navigation.navigate("EnterPasswordScreen")}
+        title="Go to Enter Password Screen"
+      />
       <TouchableOpacity onPress={() => navigation.navigate("FirstScreen")}>
         <Text>TouchableOpacity First Screen Demo</Text>
       </TouchableOpacity>
